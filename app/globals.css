@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+ 
+}
+.h1cont{
+  width: 705px;
+}
+.scale{
+  position: absolute;
+  bottom: 0;
+  
+  scale: 1.05;
+  
+}
+.scale2{
+  position: absolute;
+  top: 0;
+  
+  scale: 1.27;
+  
+}
+.scale3{
+  position: absolute;
+  top: 0;
+  
+  scale: 1.29;
+  
+}
+.ch{
+  height: 508px;
+}
+.ch1{
+  height: 368px;
+}
+.container {
+  width: 358px; /* Default width for mobile devices */
+
+  @media (min-width: 640px) {
+    width: 640px; /* Width for medium devices like tablets */
+  }
+   @media (min-width: 854px) {
+    width: 640px; /* Width for medium devices like tablets */
+    
+  }
+  @media (min-width: 1024px) {
+    width: 1298px; /* Width for large devices */
+  }
+  @media (min-width: 1280px) {
+    width: 1258px; /* Width for xlarge devices */
+  }
+   @media (min-width: 1920px) {
+    width: 1298px; /* Width for xlarge devices */
+  }
+  
+}
+

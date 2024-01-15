@@ -1,0 +1,57 @@
+[
+    {
+        "id":1,
+        "title":"Service 1",
+        "address":"s2c11.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    },
+    {
+        "id":2,
+        "title":"Service 2",
+        "address":"sc12.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    },
+    {
+        "id":3,
+        "title":"Service 3",
+        "address":"sc13.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    },
+    {
+        "id":4,
+        "title":"Service 4",
+        "address":"s2c11.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    },
+    {
+        "id":5,
+        "title":"Service 5",
+        "address":"sc12.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    },
+    {
+        "id":6,
+        "title":"Service 6",
+        "address":"sc13.png",
+        "iconaddress":"arrow.svg",
+        "iconaddress1":"arrow2.svg",
+        "link":" "
+
+    }
+    
+]
