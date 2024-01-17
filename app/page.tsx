@@ -172,7 +172,7 @@ export default function Home() {
           <div className=' flex lg:flex-row md:flex-row flex-col  justify-between'>
             <div className='lg:w-[45%] md:w-[82%] md:pe-4   border-black  mt-20' >
               <p className={`lg:text-6xl md:text-4xl text-[41px] font-fhead  relative transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>           
-              I&apos;m <span className={`transition-transform: duration-500 ${dark === 'dark' ? 'text-white':'text-navbg '}`}>Jon Dawson</span>, Product Designer
+              {/* I&apos;m <span className={`transition-transform: duration-500 ${dark === 'dark' ? 'text-white':'text-navbg '}`}>Jon Dawson</span>, Product Designer */}
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
               </p>            
