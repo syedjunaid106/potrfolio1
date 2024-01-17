@@ -1,5 +1,5 @@
-import Image from 'next/image'
 'use client'
+import Image from 'next/image'
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +8,44 @@ import { Paytone_One } from 'next/font/google';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import profilepic from './components/h1.svg'
+import jd1 from './images/jd1.svg'
+import jd from './images/jd.svg'
+import navham from './images/navham.png'
+import cross from './images/cross.svg'
+import cross1 from './images/cross1.svg'
+import v1 from './images/v1.svg'
+import v2 from './images/v2.svg'
+import hbtn from './images/hbtn.svg'
+import fb from './images/fb.svg'
+import ig from './images/ig.svg'
+import lkdn from './images/lkdn.svg'
+import figma from './images/figma.svg'
+import fcard from './images/fcard.svg'
+import adobe from './images/adobe.jpg'
+import fcard1 from './images/fcard1.svg'
+import photoshop from './images/photoshop.png'
+import fcard2 from './images/fcard2.svg'
+import canva from './images/canva.png'
+import fcard3 from './images/fcard3.svg'
+import sec31 from './images/sec31.svg'
+import sec32 from './images/sec32.svg'
+import sec33 from './images/sec33.svg'
+import sec34 from './images/sec34.svg'
+import sec35 from './images/sec35.svg'
+import sec36 from './images/sec36.svg'
+import sec37 from './images/sec37.svg'
+import sec38 from './images/sec38.svg'
+import sec4 from './images/sec4.svg'
+import sec4box from './images/sec4box.png'
+import sec41 from './images/sec41.svg'
+import sec4star from './images/sec4star.svg'
+import sec42 from './images/sec42.svg'
+import sec4star1 from './images/sec4star1.svg'
+import sec43 from './images/sec43.svg'
+import sec4star2 from './images/sec4star2.svg'
+import logofooter from './images/logofooter.svg'
+import filled from './images/filled.png'
 
 
 
@@ -47,13 +85,13 @@ export default function Home() {
     }
    }
   
-  
-  
+ 
   
   return (
    <main >
     
     < >
+ 
     <div className={`transition-transform: duration-500 ${dark === "dark"? 'bg-[#181720]':'bg-white'}`}>
     <section> 
       
@@ -65,8 +103,9 @@ export default function Home() {
        'bg-white'  : 'bg-[#22212A]'} ${dark === 'light' && ham != 'hidden' ? 'text-darktext'  : 'text-white'}  flex z-50 static 
        top-0 ${ham === 'hidden' ? 'items-center' : ''}`}>
         <div  className='lg:hidden md:hidden  '>
-        <img  className={`${ham === 'hidden'?'inline-block':'hidden' } `} src="jd.svg" alt="" />
-        <img  className={`${ham}  `} src="jd1.svg" alt="" />
+        <Image  className={`${ham === 'hidden'?'inline-block':'hidden' } `} src={jd} alt="" />
+        <Image  className={`${ham}  `} src={jd1} alt="Image"
+    />
         </div>
         <div className={`lg:flex lg:flex-row  md:flex md:flex-row  flex flex-col justify-between lg:pt-0 md:pt-0 ${ham === 'hidden'?'pt-0':'pt-20' }  items-center container `}>
         {nav.map((data,index) => (
@@ -75,13 +114,17 @@ export default function Home() {
             <div className=' '>
 
             
-              {data.id !==4 ?(
-              <a className='hover:bg-white hover:text-black px-8 md:px-4  py-4 font-semibold hover:rounded-full flex  items-center ' href="">{ data.name}</a>
-              ):(<img 
-              src="jd.svg"
-              alt="Image"
-               />)
-               }
+            {data.id !== 4 ? (
+  <a className='hover:bg-white hover:text-black px-8 md:px-4 py-4 font-semibold hover:rounded-full flex items-center ' href="">
+    {data.name}
+  </a>
+) : (
+  <Image
+    src={jd} // Update the path to your image
+    alt="Image"
+   
+  />
+)}
                </div>
           </div>
           <div className={`lg:hidden md:hidden  ${ham}`}  key={data.id} >
@@ -114,12 +157,12 @@ export default function Home() {
           </div>
           <div className='   top-0 '>
           <button onClick={hamfunc} className={`float-end lg:hidden md:hidden ${ham === 'hidden'?'inline-block':'hidden' }`}>
-          <img src="navham.png" alt="" />
+          <Image src={navham} alt="" />
           
           </button> 
           <button  onClick={hamfunc} className={` lg:hidden md:hidden  ${ham} `}>
-          <img className={`transition-transform: duration-500 ${dark === 'dark'?'hidden':'inline-block'}`} src="cross.svg" alt="" />
-          <img className={`transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src="cross1.svg" alt="" />
+          <Image className={`transition-transform: duration-500 ${dark === 'dark'?'hidden':'inline-block'}`} src={cross} alt="" />
+          <Image className={`transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src={cross1} alt="" />
             </button> 
           </div>   
       </div>
@@ -131,8 +174,8 @@ export default function Home() {
               <h1 className={`lg:text-6xl md:text-4xl text-[41px] font-fhead  relative transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>           
               I'm <span className={`transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-navbg'}`}>Jon Dawson</span>, Product Designer
               
-              <img className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src="v1.svg" alt="" />
-              <img className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src="v2.svg" alt="" />
+              <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
+              <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
               </h1>            
                 <p className={`pt-8 font-fpara text-lg font-medium transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud.</p>
               <div className='flex py-16 gap-4 font-bold'>
@@ -146,17 +189,18 @@ export default function Home() {
           </div>
           <div className='flex'>
             <div className='relative'>            
-            <img className='flex  ' src="h1.svg" alt="" />
+            <Image className='flex  ' src={profilepic} alt=""  />
             <button >
-            <img className='flex absolute  lg:bottom-5 right-0 bottom-5  lg:right-0 md:bottom-32 md:-right-3  lg:h-32 md:h-22 h-24  ' src="hbtn.svg" alt="" />
+            <Image className='flex absolute  lg:bottom-5 right-0 bottom-5  lg:right-0 md:bottom-32 md:-right-3  lg:h-32 md:h-22 h-24  ' src={hbtn} alt="" />
               </button>
             </div>
             <div className='lg:inline-block hidden'>
-              <p className='rotate-90 text-navbg mt-40'>Follow me on:</p>
+              <p className={`rotate-90 text-navbg mt-40 transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>Follow me on:</p>
               <div className='ps-10 pt-16 flex flex-col gap-8'>
-                <div><img src="fb.svg" alt="" /></div>
-                <div><img src="ig.svg" alt="" /></div>
-                <div><img src="lkdn.svg" alt="" /></div>             
+                <div><Image src={fb} alt="" /></div>
+                <div><Image src={ig} alt="" /></div>
+                <div><Image src={lkdn} alt="" /></div> 
+                          
               </div>
             </div>
           </div>      
@@ -224,11 +268,11 @@ export default function Home() {
             {data.title}
           </p>
           <p className='border border-black'></p>
-          <img className='lg:pt-10 md:pt-0 pt-10 scale'  src={data.address} alt="" />
+          <Image className='lg:pt-10 md:pt-0 pt-10 scale' height={480} width={505}  src={data.address} alt="" />
           
           <Link href={data.link}>
-            <img className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500  ${dark === 'dark'?'hidden':'inline-block'}`} src={data.iconaddress} alt="" />
-            <img className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src={data.iconaddress1} alt="" />
+            <Image className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500  ${dark === 'dark'?'hidden':'inline-block'}`} src={data.iconaddress} height={114} width={114} alt="" />
+            <Image className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src={data.iconaddress1} height={114} width={114} alt="" />
           
           </Link>
         </div>
@@ -260,26 +304,26 @@ export default function Home() {
         <div className=' lg:col-span-4 md:col-span-6 col-span-12 mt-12 mx-3'>
           <div className=' p-5 float-end   mt-5 lg:w-[90%] md:w-[90%] w-[100%] flex justify-evenly  rounded-3xl bg-navbg'>
             <div className='w-[45%] '>
-              <img className='bg-white  p-2 px-3 rounded-xl' src="figma.svg" alt="" />
+              <Image className='bg-white  p-2 px-3 rounded-xl' src={figma} alt="" />
               <p className='text-2xl py-1 font-semibold text-white'>Figma</p>
               <p className='text-xs text-slate-300 '>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
               </p>
             </div>
             <div className=' lg:ps-4 md:ps-0 ps-4 w-[60%]'>
-              <img className='' src="fcard.svg" alt="" />
+              <Image className='' src={fcard} alt="" />
             </div>
           </div>
           <div>
             <div className='bg-navbg rounded-3xl mt-5 p-5 lg:w-[70%] md:w-[70%] w-[48%] float-end'>
-              <img className='bg-white p-2 rounded-xl' src="adobe.jpg" alt="" />
+              <Image className='bg-white p-2 rounded-xl' src={adobe} alt="" />
               <p className='text-2xl py-1 font-semibold text-white'>
               Illustrator
               </p>
               <p className='text-xs text-slate-300 '>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
-              <img className='pt-4' src="fcard1.svg" alt="" />
+              <Image className='pt-4' src={fcard1} alt="" />
             </div>
             
           </div>
@@ -287,27 +331,27 @@ export default function Home() {
         <div className='lg:col-span-4 md:col-span-6  col-span-12  m-3  lg:static md:static absolute lg:top-[0%] md:top[0%] top-[64%] '>
         <div>
             <div className='bg-navbg rounded-3xl  p-5 lg:w-[70%] md:w-[70%] w-[48%]'>
-              <img className='bg-white p-2 rounded-xl' src="photoshop.png" alt="" />
+              <Image className='bg-white p-2 rounded-xl' src={photoshop} alt="" />
               <p className='text-2xl py-1 font-semibold text-white'>
               Photoshop
               </p>
               <p className='text-xs text-slate-300 '>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
-              <img  className='pt-4' src="fcard2.svg" alt="" />
+              <Image  className='pt-4' src={fcard2} alt="" />
             </div>
             
           </div>
           <div className=' p-5   mt-5 lg:w-[90%] md:w-[90%] w-[100%] flex justify-evenly  rounded-3xl bg-navbg'>
             <div className='w-[45%] '>
-              <img className='bg-white p-2 rounded-xl' src="canva.png" alt="" />
+              <Image className='bg-white p-2 rounded-xl' src={canva} alt="" />
               <p className='text-2xl py-1 font-semibold text-white'>Canva</p>
               <p className='text-xs text-slate-300 '>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
               </p>
             </div>
             <div className='lg:ps-4 md:ps-0 ps-4 w-[60%]'>
-              <img className='' src="fcard3.svg" alt="" />
+              <Image className='' src={fcard3} alt="" />
             </div>
           </div>
           
@@ -326,36 +370,36 @@ export default function Home() {
           
           <div className='flex  gap-4  flex-col lg:col-span-4 md:col-span-4 col-span-12'>
             <div className=' lg:h-1/5 md:h-1/5    rounded-3xl overflow-hidden shadow-xl'>
-              <img  className='size-full' src="sec31.svg" alt="" />
+              <Image  className='size-full' src={sec31} alt="" />
             </div>
             <div className='lg:h-1/3 md:h-1/3    lg:mb-0 md:mb-0  mb-4 rounded-3xl overflow-hidden shadow-xl'>
-              <img className='w-full h-full object-cover'  src="sec32.svg" alt="" />
+              <Image className='w-full h-full object-cover'  src={sec32} alt="" />
             </div>
             <div className='lg:h-1/3 md:h-1/4 h-1/3 rounded-3xl overflow-hidden shadow-xl lg:inline-block md:inline-block hidden'>
-              <img className=' size-full'  src="sec33.svg" alt="" />
+              <Image className=' size-full'  src={sec33} alt="" />
             </div>
           </div>
           <div className='lg:col-span-8 md:col-span-8 col-span-12'>
             <div className='lg:mx-8 md:mx-8   rounded-3xl overflow-hidden shadow-xl'>
-              <img className='size-full' src="sec34.svg" alt="" />
+              <Image className='size-full' src={sec34} alt="" />
             </div>
             <div className='flex  lg:flex-row md:flex-row  lg:gap-0 md:gap-0 gap-5 flex-col  lg:mx-6 md:mx-8 mx-6 lg:my-6 md:my-4 my-6   ' >
               <div className='flex lg:gap-7 md:gap-2 gap-7  flex-col'>
                 <div className='lg:h-72 md:h-40  rounded-3xl overflow-hidden shadow-xl'>
-                <img className='size-full' src="sec35.svg" alt="" />
+                <Image className='size-full' src={sec35} alt="" />
                 </div>
                 <div className='h-58 rounded-3xl  overflow-hidden shadow-xl lg:inline-block md:inline-block hidden'>
-                <img className='' src="sec36.svg" alt="" />
+                <Image className='' src={sec36} alt="" />
                 </div>
                 
                 
               </div>
               <div className='ps-5 flex-col'>
                 <div  className='lg:h-52 md:h-[100px]   rounded-3xl overflow-hidden shadow-xl'>
-                  <img className='size-full' src="sec37.svg" alt="" />
+                  <Image className='size-full' src={sec37} alt="" />
                 </div>
                 <div className='lg:h-80  rounded-3xl lg:my-6 md:my-5 my-6 overflow-hidden shadow-xl'>
-                  <img className='size-full ' src="sec38.svg" alt="" />
+                  <Image className='size-full ' src={sec38} alt="" />
                 </div>
               </div>
             </div>
@@ -365,28 +409,28 @@ export default function Home() {
         </div>
         <div className='lg:hidden md:hidden inline-block'>
           <div className='rounded-3xl overflow-hidden'>
-            <img className='object-cover' src="sec34.svg" alt="" />
+            <Image className='object-cover' src={sec34} alt="" />
           </div>
           <div className='flex gap-4 mt-4'>
             <div className='flex-col '>
               <div className='rounded-3xl overflow-hidden'>
-              <img className='object-cover' src="sec31.svg" alt="" />
+              <Image className='object-cover' src={sec31} alt="" />
               </div>
               <div className='rounded-3xl mt-4 overflow-hidden'>
-              <img className='object-cover' src="sec32.svg" alt="" />
+              <Image className='object-cover' src={sec32} alt="" />
               </div>
             </div>
             <div className='flex-col '>
               <div className='rounded-3xl overflow-hidden'>
-              <img className='h-[225px] object-cover' src="sec38.svg" alt="" />
+              <Image className='h-[225px] object-cover' src={sec38} alt="" />
               </div>
               <div className='rounded-3xl mt-4 overflow-hidden'>
-              <img className='object-cover' src="sec37.svg" alt="" />
+              <Image className='object-cover' src={sec37} alt="" />
               </div>
             </div>
           </div>
           <div className='rounded-3xl overflow-hidden mt-5'>
-            <img className='object-cover' src="sec35.svg" alt="" />
+            <Image className='object-cover' src={sec35} alt="" />
           </div>
         </div>
       </div>
@@ -398,12 +442,12 @@ export default function Home() {
           <p className='lg:text-6xl md:text-6xl text-4xl font-fhead'>Education</p>
           <p className='lg:hidden md:hidden inline-block py-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
-        <div className=' grid gap-5 grid-cols-12 '>
+        <div className=' grid gap-3 grid-cols-12 '>
           
           <div className={`p-5 rounded-3xl shadow-xl lg:col-span-6 md:col-span-12 col-span-12 transition-transform: duration-500 ${dark === "dark"? 'bg-[#3E3D4B]':'bg-[#F2EFFF]'} `}>
-            <img src="sec4.svg" alt="" />
-            <div className='flex gap-5 my-3 items-center'>
-              <img src="sec4box.png" alt="" />
+            <Image src={sec4} alt="" />
+            <div className='flex gap-3 my-3 items-center'>
+              <Image src={sec4box} alt="" />
               <p className='text-3xl font-extrabold'>2024</p>
             </div>
             <p className=''>
@@ -415,8 +459,8 @@ export default function Home() {
           <div className='lg:col-span-6 md:col-span-12 col-span-12'>
             <div>
               <div className={`p-5 rounded-3xl shadow-xl col-span-5 transition-transform: duration-500 ${dark === "dark"? 'bg-[#3E3D4B]':'bg-[#F2EFFF]'}`}>
-              <div className='flex lg:gap-5 md:gap-5  my-3 items-center'>
-              <img src="sec4box.png" alt="" />
+              <div className='flex gap-3  my-3 items-center'>
+              <Image src={sec4box} alt="" />
               <p className='text-3xl font-extrabold'>2022</p>
             </div>
             <p>
@@ -427,8 +471,8 @@ export default function Home() {
               </div>
               <div className='flex mt-14 gap-4'>
               <div className={`p-5 rounded-3xl shadow-2xl col-span-5 transition-transform: duration-500 ${dark === "dark"? 'bg-[#3E3D4B]':'bg-[#F2EFFF]'} `}>
-              <div className='flex gap-5 my-3 items-center'>
-              <img src="sec4box.png" alt="" />
+              <div className='flex gap-3 my-3 items-center'>
+              <Image src={sec4box} alt="" />
               <p className='text-3xl font-extrabold'>2020</p>
             </div>
             <p>
@@ -438,8 +482,8 @@ export default function Home() {
             </p>
               </div>
               <div className={`p-5 rounded-3xl shadow-2xl col-span-5 transition-transform: duration-500  ${dark === "dark"? 'bg-[#3E3D4B]':'bg-[#F2EFFF]'}`}>
-              <div className='flex gap-5 my-3 items-center'>
-              <img src="sec4box.png" alt="" />
+              <div className='flex gap-3 my-3 items-center'>
+              <Image src={sec4box} alt="" />
               <p className='text-3xl font-extrabold'>2018</p>
             </div>
             <p>
@@ -478,7 +522,7 @@ export default function Home() {
           <div className={`lg:col-span-4 md:col-span-6 col-span-12  rounded-3xl transition-transform: duration-500  ${dark === "dark"? 'bg-[#3E3D4B]':'bg-cardbg'} p-5`}>
             <div className='flex items-center gap-4 text-sm text-white'>
               <div>
-                <img src="sec41.svg" alt="" />
+                <Image src={sec41} alt="" />
               </div>
               <div>
                 <p className='text-2xl'>Elsa Aptas</p>
@@ -486,7 +530,7 @@ export default function Home() {
               </div>
             </div>
             <div className='py-2'>
-              <img src="sec4star.svg" alt="" />
+              <Image src={sec4star} alt="" />
             </div>
             <p className='text-white'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -497,7 +541,7 @@ export default function Home() {
           <div className={`lg:col-span-4 md:col-span-6 col-span-12 rounded-3xl p-5 transition-transform: duration-500 ${dark === "dark"? 'bg-[#3E3D4B]':'bg-cardbg'}`}>
             <div className='flex items-center gap-4 text-white'>
               <div>
-                <img src="sec42.svg" alt="" />
+                <Image src={sec42} alt="" />
               </div>
               <div>
                 <p className='text-2xl'>Jonas Jhon</p>
@@ -505,7 +549,7 @@ export default function Home() {
               </div>
             </div>
             <div className='py-2'>
-              <img src="sec4star1.svg" alt="" />
+              <Image src={sec4star1} alt="" />
             </div>
             <p className='text-white'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -516,7 +560,7 @@ export default function Home() {
           <div className={`lg:col-span-4 md:col-span-6  col-span-12 rounded-3xl   p-5 transition-transform: duration-500 ${dark === "dark"? 'bg-[#3E3D4B]':'bg-cardbg'}`}>
             <div className='flex items-center gap-4 text-white'>
               <div>
-                <img src="sec43.svg" alt="" />
+                <Image src={sec43} alt="" />
               </div>
               <div>
                 <p className='text-2xl'>Andrés Ceballos</p>
@@ -524,7 +568,7 @@ export default function Home() {
               </div>
             </div>
             <div className='py-2'>
-              <img src="sec4star2.svg" alt="" />
+              <Image src={sec4star2} alt="" />
             </div>
             <p className='text-white'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -552,9 +596,9 @@ export default function Home() {
           {carddata1.map((data,index)=>(
           <div className="h-full lg:col-span-4  md:col-span-6  col-span-12  size-full ">   
           <div className="overflow-hidden ch   relative  bg-[url('/rec1.svg')] rounded-3xl bg-cover  bg-center mb-10 ">
-            <img className='scale2   ' src={data.address} alt="" />
+            <Image height={480} width={505} className='scale2   ' src={data.address} alt="" />
             <button className=''>
-            <img className=' lg:h-[22%] md:h-[17%] h-[18%] absolute top-0 -right-0' src={data.iconaddress} alt="" />
+            <Image height={114} width={114} className=' lg:h-[22%] md:h-[17%] h-[18%] absolute top-0 -right-0' src={data.iconaddress} alt="" />
             </button>
             <p className='absolute p-3 font-fhead text-white lg:text-4xl md:text-4xl text-3xl  lg:top-[55%] md:top-56 top-64 z-10'>{data.title}</p>
             <p className='absolute px-3 py-8 text-slate-300 text-lg lg:top-[60%] md:top-72 top-72 z-10'>{data.data}</p>
@@ -584,12 +628,12 @@ export default function Home() {
           </div>
           <div className='grid grid-cols-12 py-10 gap-6 lg:gap-24 md:gap-5'>
             <div className='lg:col-span-4 md:col-span-3 col-span-12'>
-              <img src="logofooter.svg" alt="" />
+              <Image src={logofooter} alt="" />
               <p className='py-6 text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>             
             <div className='flex gap-2'>
             {footerdata.map((data,index)=>(
               <div key={index}>
-              <img src={data.address} alt="" />
+              <Image height={10 } width={10} src={data.address} alt="" />
               </div>
               ))}
             </div>
@@ -613,7 +657,7 @@ export default function Home() {
                 <div className="relative flex">
   <input placeholder="Email Address" className="rounded-lg lg:px-7 md:px-0 px-14 py-2 my-2 pl-4" type="text" />
   <button className="absolute lg:right-5 md:-right-9 right-28 top-3 px-2 py-1 rounded-r-lg bg-white" type="button">
-    <img src="filled.png" alt="" />
+    <Image src={filled} alt="" />
   </button>
 </div>            
 </div>

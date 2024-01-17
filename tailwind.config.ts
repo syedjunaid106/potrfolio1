@@ -11,6 +11,13 @@ const config: Config = {
    
     
     extend: {
+      darkMode: 'class',
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
+    },
+  },
       colors:{
          navbg:'#583EBC',
          cardbg:'#6851C3',

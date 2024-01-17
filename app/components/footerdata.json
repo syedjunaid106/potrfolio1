@@ -1,22 +1,22 @@
 [
     {
         "id":1,
-        "address":"facebook.png"
+        "address":"/images/facebook.png"
     },
     {
         "id":1,
-        "address":"whatsapp.png"
+        "address":"/images/whatsapp.png"
     },
     {
         "id":1,
-        "address":"instagram.png"
+        "address":"/images/instagram.png"
     },
     {
         "id":1,
-        "address":"filled.svg"
+        "address":"/images/filled.svg"
     },
     {
         "id":1,
-        "address":"youtube.png"
+        "address":"/images/youtube.png"
     }
 ]
