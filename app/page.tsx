@@ -171,12 +171,11 @@ export default function Home() {
         <div className=' mx-auto container  lg:mt-36 md:mt-20'>
           <div className=' flex lg:flex-row md:flex-row flex-col  justify-between'>
             <div className='lg:w-[45%] md:w-[82%] md:pe-4   border-black  mt-20' >
-              <h1 className={`lg:text-6xl md:text-4xl text-[41px] font-fhead  relative transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>           
-              I'm <span className={` ${dark === 'dark'? 'text-white':'text-navbg'}`}>Jon Dawson</span>, Product Designer
-              
+              <p className={`lg:text-6xl md:text-4xl text-[41px] font-fhead  relative transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>           
+              I&apos;m <span className={`transition-transform: duration-500 ${dark === 'dark' ? 'text-white':'text-navbg '}`}>Jon Dawson</span>, Product Designer
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
-              </h1>            
+              </p>            
                 <p className={`pt-8 font-fpara text-lg font-medium transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud.</p>
               <div className='flex py-16 gap-4 font-bold'>
               <button onClick={darkfunc} className={`  lg:px-16 lg:py-4 md:px-10 md:py-2 px-12 py-3 rounded-lg transition-transform: duration-500  ${dark === "dark"? 'text-black':'text-white'}   ${dark === "dark"? 'bg-white':'bg-black'}`}>
