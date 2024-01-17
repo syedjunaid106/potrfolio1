@@ -172,7 +172,7 @@ export default function Home() {
           <div className=' flex lg:flex-row md:flex-row flex-col  justify-between'>
             <div className='lg:w-[45%] md:w-[82%] md:pe-4   border-black  mt-20' >
               <h1 className={`lg:text-6xl md:text-4xl text-[41px] font-fhead  relative transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>           
-              I'm <span className={`transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-navbg'}`}>Jon Dawson</span>, Product Designer
+              I'm <span className={`transition-transform: duration-500 ${dark === 'dark'? 'text-white':'text-navbg'}`}>Jon Dawson</span>, Product Designer
               
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
               <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
@@ -594,9 +594,9 @@ export default function Home() {
           
           <div className='grid  grid-cols-12 lg:gap-8 md:gap-8  my-16'>
           {carddata1.map((data,index)=>(
-          <div className="h-full lg:col-span-4  md:col-span-6  col-span-12  size-full ">   
+          <div key={index} className="h-full lg:col-span-4  md:col-span-6  col-span-12  size-full ">   
           <div className="overflow-hidden ch   relative  bg-[url('/rec1.svg')] rounded-3xl bg-cover  bg-center mb-10 ">
-            <Image height={480} width={505} className='scale2   ' src={data.address} alt="" />
+            <Image  height={480} width={505} className='scale2   ' src={data.address} alt="" />
             <button className=''>
             <Image height={114} width={114} className=' lg:h-[22%] md:h-[17%] h-[18%] absolute top-0 -right-0' src={data.iconaddress} alt="" />
             </button>
@@ -641,7 +641,7 @@ export default function Home() {
             <div className='lg:col-span-2 md:col-span-2 col-span-6'>
               <p className='text-xl font-bold text-white '>Navigation</p>
               {nav.map((data,index)=>(
-                <div className='py-1 text-white'>
+                <div key={index} className='py-1 text-white'>
                   <a className='' href="">{data.name}</a>
                 </div>
               ))}
