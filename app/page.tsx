@@ -109,8 +109,8 @@ export default function Home() {
         </div>
         <div className={`lg:flex lg:flex-row  md:flex md:flex-row  flex flex-col justify-between lg:pt-0 md:pt-0 ${ham === 'hidden'?'pt-0':'pt-20' }  items-center container `}>
         {nav.map((data,index) => (
-          <>
-          <div className={`lg:inline-block md:inline-block hidden  `} key={data.id} >
+          <> 
+          <div  className={`lg:inline-block md:inline-block hidden  `} key={index} >
             <div className=' '>
 
             
@@ -175,8 +175,8 @@ export default function Home() {
               <div>
               I&apos;m <span className={`transition-transform: duration-500 ${dark === 'dark' ? 'text-white':'text-navbg '}`}>Jon Dawson</span>, Product Designer
                 </div>         
-              <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
-              <Image className={`absolute -right-0 lg:-top-6 md:-top-6 -top-2 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
+              <Image className={`absolute -right-0 lg:-top-6 md:-top-8 -top-8 transition-transform: duration-500 ${dark === "dark"? 'hidden':'inline-block'}`} src={v1} alt="" />
+              <Image className={`absolute -right-0 lg:-top-6 md:-top-8 -top-8 transition-transform: duration-500 ${dark === "dark"? 'inline-block':'hidden'}`} src={v2} alt="" />
               </p>            
                 <p className={`pt-8 font-fpara text-lg font-medium transition-transform: duration-500 ${dark === "dark"? 'text-white':'text-darktext'}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud.</p>
               <div className='flex py-16 gap-4 font-bold'>
@@ -192,7 +192,7 @@ export default function Home() {
             <div className='relative'>            
             <Image className='flex  ' src={profilepic} alt=""  />
             <button >
-            <Image className='flex absolute  lg:bottom-5 right-0 bottom-5  lg:right-0 md:bottom-32 md:-right-3  lg:h-32 md:h-22 h-24  ' src={hbtn} alt="" />
+            <Image className='flex absolute  lg:bottom-5 -right-4 bottom-7  lg:right-0 md:bottom-[28%] md:-right-5  lg:h-32 md:h-20 h-24  ' src={hbtn} alt="" />
               </button>
             </div>
             <div className='lg:inline-block hidden'>
@@ -272,8 +272,8 @@ export default function Home() {
           <Image className='lg:pt-10 md:pt-0 pt-10 scale' height={480} width={505}  src={data.address} alt="" />
           
           <Link href={data.link}>
-            <Image className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500  ${dark === 'dark'?'hidden':'inline-block'}`} src={data.iconaddress} height={114} width={114} alt="" />
-            <Image className={`absolute bottom-0  lg:-right-0  -right-0 md:-right-0  lg:h-28 md:h-[75px]  h-[90px]  transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src={data.iconaddress1} height={114} width={114} alt="" />
+            <Image className={`absolute bottom-0  lg:-right-0  -right-2 md:-right-3  lg:h-28 md:h-[75px]  h-[95px]  transition-transform: duration-500  ${dark === 'dark'?'hidden':'inline-block'}`} src={data.iconaddress} height={114} width={114} alt="" />
+            <Image className={`absolute bottom-0  lg:-right-0  -right-2 md:-right-3  lg:h-28 md:h-[75px]  h-[95px]  transition-transform: duration-500 ${dark === 'dark'?'inline-block':'hidden'}`} src={data.iconaddress1} height={114} width={114} alt="" />
           
           </Link>
         </div>
@@ -593,17 +593,20 @@ export default function Home() {
             </div>
           </div>
           
-          <div className='grid  grid-cols-12 lg:gap-8 md:gap-8  my-16'>
+          <div className='grid  grid-cols-12 lg:gap-5 md:gap-8  my-16'>
           {carddata1.map((data,index)=>(
           <div key={index} className="h-full lg:col-span-4  md:col-span-6  col-span-12  size-full ">   
-          <div className="overflow-hidden ch   relative  bg-[url('/rec1.svg')] rounded-3xl bg-cover  bg-center mb-10 ">
-            <Image  height={480} width={505} className='scale2   ' src={data.address} alt="" />
+          <div className="overflow-hidden  lg:h-[460px] md:h-[400px] h-[460px] lg:w-[92%]   relative  bg-[url('/rec1.svg')] rounded-3xl bg-cover  bg-center mb-10 ">
+            <div className=' relative lg:w-[103%] md:w-[105%] w-[103%]'>
+            <Image   height={200} width={480} className='object-cover absolute -top-3    ' src={data.address} alt="" />
+
+            </div>
             <button className=''>
-            <Image height={114} width={114} className=' lg:h-[22%] md:h-[17%] h-[18%] absolute top-0 -right-0' src={data.iconaddress} alt="" />
+            <Image height={114} width={114} className=' lg:h-[20%] md:h-[17%] h-[20%] absolute lg:top-0 lg:-right-1 md:top-0 md:-right-5 top-0 -right-2' src={data.iconaddress} alt="" />
             </button>
-            <p className='absolute p-3 font-fhead text-white lg:text-4xl md:text-4xl text-3xl  lg:top-[55%] md:top-56 top-64 z-10'>{data.title}</p>
-            <p className='absolute px-3 py-8 text-slate-300 text-lg lg:top-[60%] md:top-72 top-72 z-10'>{data.data}</p>
-            <p className='absolute px-3 py-16 text-slate-300 text-xl  lg:top-96 md:top-96 top-[75%] z-10 font-extrabold'>7 october 2019</p>
+            <p className='absolute p-3 font-fhead text-white lg:text-4xl md:text-3xl text-3xl  lg:top-[52%] md:top-48 top-64 z-10'>{data.title}</p>
+            <p className='absolute px-3 py-8 text-slate-300 text-base lg:top-[60%] md:top-56 top-72 z-10'>{data.data}</p>
+            <p className='absolute px-3 py-16 text-slate-300 text-xl  lg:top-[70%] md:top-[75%] top-[77%] z-10 font-extrabold'>7 october 2019</p>
             </div >     
           </div>
            ))}
@@ -634,7 +637,7 @@ export default function Home() {
             <div className='flex gap-2'>
             {footerdata.map((data,index)=>(
               <div key={index}>
-              <Image height={10 } width={10} src={data.address} alt="" />
+              <Image height={30 } width={30} src={data.address} alt="" />
               </div>
               ))}
             </div>
