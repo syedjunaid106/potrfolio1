@@ -3,7 +3,7 @@
     {
         "id":1,
         "title":"Service 1",
-        "address":"/./images/s2c11.png",
+        "address":"/images/s2c11.png",
         "iconaddress":"/./images/arrow.svg",
         "iconaddress1":"/./images/arrow2.svg",
         "link":" "
@@ -12,7 +12,7 @@
     {
         "id":2,
         "title":"Service 2",
-        "address":"/./images/sc12.png",
+        "address":"/images/sc12.png",
         "iconaddress":"/./images/arrow.svg",
         "iconaddress1":"/./images/arrow2.svg",
         "link":" "
@@ -21,7 +21,7 @@
     {
         "id":3,
         "title":"Service 3",
-        "address":"/./images/sc13.png",
+        "address":"/images/sc13.png",
         "iconaddress":"/./images/arrow.svg",
         "iconaddress1":"/./images/arrow2.svg",
         "link":" "
@@ -30,7 +30,7 @@
     {
         "id":4,
         "title":"Service 4",
-        "address":"/./images/s2c11.png",
+        "address":"/images/s2c11.png",
         "iconaddress":"/./images/arrow.svg",
         "iconaddress1":"/./images/arrow2.svg",
         "link":" "
@@ -39,7 +39,7 @@
     {
         "id":5,
         "title":"Service 5",
-        "address":"/./images/sc12.png",
+        "address":"/images/sc12.png",
         "iconaddress":"/./images/arrow.svg",
         "iconaddress1":"/./images/arrow2.svg",
         "link":" "
